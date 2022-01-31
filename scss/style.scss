@@ -1,0 +1,104 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.v-center{
+    align-items: center;
+}
+.header{
+    display: block;
+    padding:15px;
+    position: relative;
+    width: 100%;
+    z-index: 999;
+    .container{
+        max-width: 1170px;
+        padding: 0 15px;
+        margin: auto;
+        width: 100%;
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            .header-items{}
+            .left-item{
+                flex: 0 0 15%;
+                .logo{
+                    font-size: 23px;
+                    font-weight: 500;
+                }
+            }
+            .center-item{
+                flex: 0 0 67%;
+                .menu{
+                    .menu-main{
+                        margin: 0;
+                        padding:0;
+                        li{
+                            display: inline-block;
+                            list-style: none;
+                            padding-left: 25px;
+                            line-height: 50px;
+                            &:hover .sub-menu{
+                                margin-top: 0%;
+                                visibility: visible;
+                                opacity: 1;
+                            }
+                            a{
+                                text-decoration: none;
+                                color: black;
+                                font-size: 15px;
+                                font-weight: 500;
+                                text-transform: uppercase;
+                                transition: color 0.3s ease;
+                                &:hover{
+                                    color: #ea4636;
+                                }
+                                .fal{
+                                    font-weight: 500;
+                                    padding-left: 3px;
+                                }
+                            }
+                            .single-column-menu{
+                                min-width: 280px;
+                                max-width: 350px;
+                            }
+                            .sub-menu{
+                                position: absolute;
+                                z-index:500;
+                                background-color: #ffffff;
+                                box-shadow: -2px 2px 70px -25px rgba(0,0,0,0.3);
+                                padding: 5px 10px;
+                                transition: all 0.3s ease;
+                                margin-top: 25px;                                
+                                visibility: hidden;
+                                opacity: 0;
+                                ul{
+                                    li{
+                                        display: block;
+                                        a{
+                                        }
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+            .right-item{
+                flex: 0 0 17%;
+                justify-content: flex-end;
+                .fal{
+                    padding: 0 10px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    &:hover{
+                        color: #ea4636;
+                    }
+                }
+            }
+        }
+    }
+}
